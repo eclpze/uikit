@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:package_uikit/package_uikit.dart';
 import 'package:package_uikit/src/widget/custom_icon.dart';
 
 // Губайдуллина Камилла, 16.01.2026 13:10, текстовое поле для ввода данных в проекте
@@ -48,6 +49,8 @@ class _CustomSearchState extends State<CustomSearch> {
         decoration: InputDecoration(
           fillColor: widget.color,
           filled: true,
+          hintText: widget.hintText,
+          hintStyle: headlineRegular.copyWith(color: caption),
           suffixIcon: hasText
               ? CustomIcon(
                   onPressed: () {},
