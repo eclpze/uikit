@@ -7,8 +7,8 @@ class CustomSearch extends StatefulWidget {
   final Color color; // Цвет поля
   final double borderRadius; // Закругление границ
   final Color border; // Цвет границ
-  final String pathicon1; // Путь к иконке1
-  final String pathicon2; // Путь к иконке2
+  final String pathIcon1; // Путь к иконке1
+  final String pathIcon2; // Путь к иконке2
   final Color enabledBorder; // Цвет границ
   final Color focusBorder; // Цвет границ
   final String hintText; // Текст-подсказка
@@ -25,7 +25,9 @@ class CustomSearch extends StatefulWidget {
     required this.focusBorder,
     required this.hintText,
     required this.paddingTextField,
-    required this.colorCursor, required this.pathicon1, required this.pathicon2,
+    required this.colorCursor,
+    required this.pathIcon1,
+    required this.pathIcon2,
   });
 
   @override
@@ -46,16 +48,18 @@ class _CustomSearchState extends State<CustomSearch> {
         decoration: InputDecoration(
           fillColor: widget.color,
           filled: true,
-          suffixIcon: hasText ? CustomIcon(
-            onPressed: () {},
-            path: widget.pathicon2,
-            height: 20,
-            width: 20,
-            padding: 0,
-          ) : null,
+          suffixIcon: hasText
+              ? CustomIcon(
+                  onPressed: () {},
+                  path: widget.pathIcon2,
+                  height: 20,
+                  width: 20,
+                  padding: 0,
+                )
+              : null,
           prefixIcon: CustomIcon(
             onPressed: () {},
-            path: widget.pathicon1,
+            path: widget.pathIcon1,
             height: 20,
             width: 20,
             padding: 0,

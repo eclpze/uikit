@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 // Губайдуллина Камилла, 16.01.2026 13:29, текстовое поле для ввода данных в проекте
 class CustomIcon extends StatelessWidget {
@@ -23,7 +24,7 @@ class CustomIcon extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: padding),
       child: IconButton(
         onPressed: onPressed,
-        icon: Image.asset(path, width: width, height: height),
+        icon: SvgPicture.asset(path, width: width, height: height),
       ),
     );
   }
