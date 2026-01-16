@@ -45,7 +45,10 @@ class _CustomDropDownState extends State<CustomDropDown> {
           return DropdownMenuItem(value: item, child: Text(item));
         }).toList(),
         onChanged: (String? newValue) {
-          selectedIndex = newValue;
+          setState(() {
+            selectedIndex = newValue;
+          });
+
         },
         hint: Text(
           widget.hintText,
