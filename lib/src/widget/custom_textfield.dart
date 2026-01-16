@@ -19,7 +19,7 @@ class CustomTextField extends StatefulWidget {
   final Color enabledBorder; // Цвет границ
   final Color focusBorder; // Цвет границ
   final String hintText; // Текст-подсказка
-  final String errorText; // Текст ошибки
+  final String? errorText; // Текст ошибки
   final double paddingTitle; // Отступы заголовка
   final double paddingTextField; // Отступы поля
 
@@ -49,7 +49,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   @override
   Widget build(BuildContext context) {
-    bool hasError = widget.errorText.isNotEmpty;
+    final hasError = widget.errorText!.isNotEmpty;
     return Column(
       children: [
         if (widget.isTitle)
