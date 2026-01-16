@@ -1,100 +1,101 @@
 import 'dart:ui';
+import 'package:flutter/src/painting/text_style.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:package_uikit/src/color.dart';
 
 // Губайдуллина Камилла, 16.01.2026 12:34, основные текстовые стили для проекта
 
-final title1semi = GoogleFonts.roboto(
+TextStyle title1semi = GoogleFonts.roboto(
   fontSize: 24,
   fontWeight: FontWeight.w700,
   color: black,
 );
 
-final title1extraBold = GoogleFonts.roboto(
+TextStyle title1extraBold = GoogleFonts.roboto(
   fontSize: 24,
   fontWeight: FontWeight.bold,
   color: black,
 );
 
-final title2regular = GoogleFonts.roboto(
+TextStyle title2regular = GoogleFonts.roboto(
   fontSize: 20,
   fontWeight: FontWeight.w500,
   color: black,
 );
 
-final title2semi = GoogleFonts.roboto(
+TextStyle title2semi = GoogleFonts.roboto(
   fontSize: 20,
   fontWeight: FontWeight.w700,
   color: black,
 );
 
-final title2extraBold = GoogleFonts.roboto(
+TextStyle title2extraBold = GoogleFonts.roboto(
   fontSize: 20,
   fontWeight: FontWeight.bold,
   color: black,
 );
 
-final title3regular = GoogleFonts.roboto(
+TextStyle title3regular = GoogleFonts.roboto(
   fontSize: 17,
   fontWeight: FontWeight.w500,
   color: black,
 );
 
-final title3medium = GoogleFonts.roboto(
+TextStyle title3medium = GoogleFonts.roboto(
   fontSize: 17,
   fontWeight: FontWeight.w600,
   color: black,
 );
 
-final title3semi = GoogleFonts.roboto(
+TextStyle title3semi = GoogleFonts.roboto(
   fontSize: 17,
   fontWeight: FontWeight.w700,
   color: black,
 );
 
-final headlineRegular = GoogleFonts.roboto(
+TextStyle headlineRegular = GoogleFonts.roboto(
   fontSize: 16,
   fontWeight: FontWeight.w500,
   color: black,
 );
 
-final headlineMedium = GoogleFonts.roboto(
+TextStyle headlineMedium = GoogleFonts.roboto(
   fontSize: 16,
   fontWeight: FontWeight.w600,
   color: black,
 );
 
-final textRegular = GoogleFonts.roboto(
+TextStyle textRegular = GoogleFonts.roboto(
   fontSize: 15,
   fontWeight: FontWeight.w500,
   color: black,
 );
 
-final textMedium = GoogleFonts.roboto(
+TextStyle textMedium = GoogleFonts.roboto(
   fontSize: 15,
   fontWeight: FontWeight.w600,
   color: black,
 );
 
-final captionRegular = GoogleFonts.roboto(
+TextStyle captionRegular = GoogleFonts.roboto(
   fontSize: 14,
   fontWeight: FontWeight.w500,
   color: black,
 );
 
-final captionSemi = GoogleFonts.roboto(
+TextStyle captionSemi = GoogleFonts.roboto(
   fontSize: 14,
   fontWeight: FontWeight.w700,
   color: black,
 );
 
-final caption2Regular = GoogleFonts.roboto(
+TextStyle caption2Regular = GoogleFonts.roboto(
   fontSize: 12,
   fontWeight: FontWeight.w700,
   color: black,
 );
 
-final caption2Bold = GoogleFonts.roboto(
+TextStyle caption2Bold = GoogleFonts.roboto(
   fontSize: 12,
   fontWeight: FontWeight.w800,
   color: black,
