@@ -46,20 +46,20 @@ class _CustomSearchState extends State<CustomSearch> {
         decoration: InputDecoration(
           fillColor: widget.color,
           filled: true,
-          suffixIcon: CustomIcon(
-            onPressed: () {},
-            path: widget.pathicon1,
-            height: 20,
-            width: 20,
-            padding: 0,
-          ),
-          icon: hasText ? CustomIcon(
+          suffixIcon: hasText ? CustomIcon(
             onPressed: () {},
             path: widget.pathicon2,
             height: 20,
             width: 20,
             padding: 0,
           ) : null,
+          prefixIcon: CustomIcon(
+            onPressed: () {},
+            path: widget.pathicon1,
+            height: 20,
+            width: 20,
+            padding: 0,
+          ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(widget.borderRadius),
