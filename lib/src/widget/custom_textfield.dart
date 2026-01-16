@@ -19,7 +19,7 @@ class CustomTextField extends StatefulWidget {
   final Color enabledBorder; // Цвет границ
   final Color focusBorder; // Цвет границ
   final String hintText; // Текст-подсказка
-  final String? errorText; // Текст ошибки
+  final String errorText; // Текст ошибки
   final double paddingTitle; // Отступы заголовка
   final double paddingTextField; // Отступы поля
 
@@ -37,7 +37,8 @@ class CustomTextField extends StatefulWidget {
     required this.paddingTitle,
     required this.paddingTextField,
     required this.borderRadius,
-    required this.type, required this.colorCursor,
+    required this.type,
+    required this.colorCursor,
   });
 
   @override
@@ -49,7 +50,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   @override
   Widget build(BuildContext context) {
-    final hasError = widget.errorText != null && widget.errorText!.isEmpty;
+    final hasError = widget.errorText.isNotEmpty;
 
     return Column(
       children: [
@@ -110,6 +111,19 @@ class _CustomTextFieldState extends State<CustomTextField> {
             ),
           ),
         ),
+        if (hasError)
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: widget.paddingTextField),
+            child: Row(
+              children: [
+                Text(
+                  widget.errorText,
+                  style: captionRegular.copyWith(color: error),
+                ),
+                Spacer(),
+              ],
+            ),
+          ),
       ],
     );
   }
