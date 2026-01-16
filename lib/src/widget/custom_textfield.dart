@@ -33,7 +33,7 @@ class CustomTextField extends StatefulWidget {
     required this.enabledBorder,
     required this.focusBorder,
     required this.hintText,
-    required this.errorText,
+    this.errorText,
     required this.paddingTitle,
     required this.paddingTextField,
     required this.borderRadius,
