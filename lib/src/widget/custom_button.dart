@@ -63,10 +63,10 @@ class _CustomButtonState extends State<CustomButton> {
         child: Text(
           widget.text,
           style: GoogleFonts.roboto(
-            fontSize: 17,
+            fontSize: 15,
             fontWeight: FontWeight.w700,
             color: widget.isSelected
-                ? widget.colorText : black,
+                ? widget.colorText : desc,
           ),
         ),
       );
