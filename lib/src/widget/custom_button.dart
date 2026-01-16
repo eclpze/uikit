@@ -51,7 +51,6 @@ class _CustomButtonState extends State<CustomButton> {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
           minimumSize: Size(widget.width, widget.width),
-          fixedSize: Size(widget.width, widget.width),
           backgroundColor: widget.isSelected
               ? widget.selected
               : widget.notSelected,
@@ -77,7 +76,6 @@ class _CustomButtonState extends State<CustomButton> {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
           minimumSize: Size(widget.width, widget.width),
-          fixedSize: Size(widget.width, widget.width),
           backgroundColor: widget.color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
@@ -121,7 +119,6 @@ class _CustomButtonState extends State<CustomButton> {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
           minimumSize: Size(widget.width, widget.width),
-          fixedSize: Size(widget.width, widget.width),
           backgroundColor: widget.isSelected
               ? widget.selected
               : widget.notSelected,
@@ -160,7 +157,6 @@ class _CustomButtonState extends State<CustomButton> {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
           minimumSize: Size(widget.width, widget.width),
-          fixedSize: Size(widget.width, widget.width),
           backgroundColor: widget.color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
