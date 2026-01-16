@@ -11,7 +11,7 @@ class CustomDropDown extends StatefulWidget {
   final Color color; // Цвет списка
   final String hintText; // Заголовок списка
   final double borderRadius; // Закругление
-  final String selectedIndex; // Выбранное значение
+  // final String selectedIndex; // Выбранное значение
 
   const CustomDropDown({
     super.key,
@@ -21,7 +21,7 @@ class CustomDropDown extends StatefulWidget {
     required this.color,
     required this.hintText,
     required this.borderRadius,
-    required this.selectedIndex,
+    // required this.selectedIndex,
   }) : _items = items;
 
   @override
@@ -29,6 +29,7 @@ class CustomDropDown extends StatefulWidget {
 }
 
 class _CustomDropDownState extends State<CustomDropDown> {
+  String? selectedIndex;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,7 +40,7 @@ class _CustomDropDownState extends State<CustomDropDown> {
         borderRadius: BorderRadius.all(Radius.circular(widget.borderRadius)),
       ),
       child: DropdownButton(
-        value: widget.selectedIndex,
+        value: selectedIndex,
         items: widget._items
             .map((item) => DropdownMenuItem(value: item, child: Text(item)))
             .toList(),
