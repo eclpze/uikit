@@ -34,7 +34,7 @@ class _CustomTabBarState extends State<CustomTabBar> {
       items: List.generate(
         widget.title.length,
         (index) => BottomNavigationBarItem(
-          icon: Image.asset(widget.icon[index]),
+          icon: Image.asset(widget.icon[index], width: 32, height: 32,),
           label: widget.title[index],
         ),
       ),
