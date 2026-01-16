@@ -42,9 +42,11 @@ class _CustomDropDownState extends State<CustomDropDown> {
       child: DropdownButton(
         value: selectedIndex,
         items: widget._items
-            .map((item) => DropdownMenuItem(value: item, child: Text(item)))
+            .map((String item) => DropdownMenuItem(value: item, child: Text(item)))
             .toList(),
-        onChanged: (newValue) {},
+        onChanged: (String? newValue) {
+          selectedIndex = newValue;
+        },
         hint: Text(
           widget.hintText,
           style: headlineRegular.copyWith(color: caption),
