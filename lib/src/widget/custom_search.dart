@@ -1,0 +1,83 @@
+import 'package:flutter/material.dart';
+import 'package:package_uikit/src/widget/custom_icon.dart';
+
+// Губайдуллина Камилла, 16.01.2026 13:10, текстовое поле для ввода данных в проекте
+class CustomSearch extends StatefulWidget {
+  final TextEditingController controller; // Контроллер
+  final Color color; // Цвет поля
+  final double borderRadius; // Закругление границ
+  final Color border; // Цвет границ
+  final Color enabledBorder; // Цвет границ
+  final Color focusBorder; // Цвет границ
+  final String hintText; // Текст-подсказка
+  final double paddingTextField; // Отступы поля
+  final Color colorCursor; // Цвет курсора
+
+  const CustomSearch({
+    super.key,
+    required this.controller,
+    required this.color,
+    required this.borderRadius,
+    required this.border,
+    required this.enabledBorder,
+    required this.focusBorder,
+    required this.hintText,
+    required this.paddingTextField,
+    required this.colorCursor,
+  });
+
+  @override
+  State<CustomSearch> createState() => _CustomSearchState();
+}
+
+class _CustomSearchState extends State<CustomSearch> {
+  @override
+  Widget build(BuildContext context) {
+    bool hasText = widget.controller.text.isNotEmpty;
+
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: (widget.paddingTextField)),
+      child: TextField(
+        controller: widget.controller,
+        onChanged: (i) {},
+        cursorColor: widget.colorCursor,
+        decoration: InputDecoration(
+          fillColor: widget.color,
+          filled: true,
+          suffixIcon: CustomIcon(
+            onPressed: () {},
+            path: 'assets/search.svg',
+            height: 20,
+            width: 20,
+            padding: 0,
+          ),
+          icon: hasText ? CustomIcon(
+            onPressed: () {},
+            path: 'assets/close.svg',
+            height: 20,
+            width: 20,
+            padding: 0,
+          ) : null,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(widget.borderRadius),
+            ),
+            borderSide: BorderSide(color: widget.border),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(widget.borderRadius),
+            ),
+            borderSide: BorderSide(color: widget.focusBorder),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(widget.borderRadius),
+            ),
+            borderSide: BorderSide(color: widget.enabledBorder),
+          ),
+        ),
+      ),
+    );
+  }
+}
