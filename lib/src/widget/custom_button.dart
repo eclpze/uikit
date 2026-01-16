@@ -22,7 +22,6 @@ class CustomButton extends StatefulWidget {
   final Color? notSelected; // Цвет невыбранной кнопки
   final bool isSelected; // Значение для chips
 
-
   const CustomButton({
     super.key,
     required this.type,
@@ -67,7 +66,7 @@ class _CustomButtonState extends State<CustomButton> {
             fontSize: 17,
             fontWeight: FontWeight.w700,
             color: widget.isSelected
-                ? widget.colorText : bg,
+                ? widget.colorText : black,
           ),
         ),
       );
