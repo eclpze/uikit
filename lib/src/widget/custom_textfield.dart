@@ -49,7 +49,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   @override
   Widget build(BuildContext context) {
-    final hasError = widget.errorText!.isNotEmpty &&  widget.errorText != null;
+    final hasError = widget.errorText != null && widget.errorText!.isNotEmpty;
     return Column(
       children: [
         if (widget.isTitle)
