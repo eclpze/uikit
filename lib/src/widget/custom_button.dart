@@ -50,7 +50,7 @@ class _CustomButtonState extends State<CustomButton> {
     if (widget.type == ButtonType.chips) {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
-          minimumSize: Size(widget.width, widget.width),
+          minimumSize: Size(widget.width, widget.height),
           backgroundColor: widget.isSelected
               ? widget.selected
               : widget.notSelected,
@@ -75,7 +75,7 @@ class _CustomButtonState extends State<CustomButton> {
     if (widget.type == ButtonType.cart) {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
-          minimumSize: Size(widget.width, widget.width),
+          minimumSize: Size(widget.width, widget.height),
           backgroundColor: widget.color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
@@ -118,7 +118,7 @@ class _CustomButtonState extends State<CustomButton> {
     if (widget.type == ButtonType.login) {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
-          minimumSize: Size(widget.width, widget.width),
+          minimumSize: Size(widget.width, widget.height),
           backgroundColor: widget.isSelected
               ? widget.selected
               : widget.notSelected,
@@ -156,7 +156,7 @@ class _CustomButtonState extends State<CustomButton> {
     } else {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
-          minimumSize: Size(widget.width, widget.width),
+          minimumSize: Size(widget.width, widget.height),
           backgroundColor: widget.color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
