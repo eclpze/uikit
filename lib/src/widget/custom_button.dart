@@ -10,7 +10,7 @@ enum ButtonType { primary, secondary, inactive, tetriary, cart, chips, login }
 class CustomButton extends StatefulWidget {
   final VoidCallback onPressed; // Действие при нажатии
   final ButtonType type; // Тип кнопки
-  final Color color; // Цвет кнопки
+  final Color? color; // Цвет кнопки
   final Color colorText; // Цвет текста
   final String text; // Текст кнопки
   final String? price; // Текст для типа cart
@@ -18,8 +18,8 @@ class CustomButton extends StatefulWidget {
   final double height; // Высота
   final double width; // Ширина
   final String? icon; // Путь к иконке
-  final Color selected; // Цвет выбранной кнопки
-  final Color notSelected; // Цвет невыбранной кнопки
+  final Color? selected; // Цвет выбранной кнопки
+  final Color? notSelected; // Цвет невыбранной кнопки
   final bool? isSelected; // Значение для chips
 
   const CustomButton({
