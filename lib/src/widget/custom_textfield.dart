@@ -117,7 +117,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             child: Row(
               children: [
                 Text(
-                  widget.errorText,
+                  widget.errorText!,
                   style: captionRegular.copyWith(color: error),
                 ),
                 Spacer(),
