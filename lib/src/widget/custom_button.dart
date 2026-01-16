@@ -21,6 +21,8 @@ class CustomButton extends StatefulWidget {
   final Color? selected; // Цвет выбранной кнопки
   final Color? notSelected; // Цвет невыбранной кнопки
   final bool isSelected; // Значение для chips
+  final String? path1; // Путь к иконке1
+  final String? path2; // Путь к иконке2
 
   const CustomButton({
     super.key,
@@ -36,7 +38,7 @@ class CustomButton extends StatefulWidget {
     required this.colorText,
     required this.selected,
     required this.notSelected,
-    required this.isSelected,
+    required this.isSelected, this.path1, this.path2,
   });
 
   @override
@@ -89,7 +91,7 @@ class _CustomButtonState extends State<CustomButton> {
           children: [
             CustomIcon(
               onPressed: () {},
-              path: 'assets/cart.svg',
+              path: widget.path1!,
               height: 20,
               width: 20,
               padding: 0,
@@ -137,7 +139,7 @@ class _CustomButtonState extends State<CustomButton> {
             Spacer(),
             CustomIcon(
               onPressed: () {},
-              path: 'assets/vk.svg',
+              path: widget.path2!,
               height: 32,
               width: 32,
               padding: 0,
