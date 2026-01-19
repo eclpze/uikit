@@ -92,6 +92,7 @@ class _CustomButtonState extends State<CustomButton> {
               overflow: TextOverflow.ellipsis,
               style: title3semi.copyWith(color: white)
             ),
+            SizedBox(width: 6,),
             if (widget.price != null)
               Text(
               widget.price!,
