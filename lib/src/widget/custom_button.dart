@@ -87,7 +87,7 @@ class _CustomButtonState extends State<CustomButton> {
               width: 20,
               padding: 0,
             ),
-            SizedBox(width: 12),
+            SizedBox(width: 20),
             Text(
               widget.text,
               overflow: TextOverflow.ellipsis,
