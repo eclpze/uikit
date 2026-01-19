@@ -29,6 +29,7 @@ flutter:
 
   assets:
      - assets/
+     - fonts/MyFlutterApp.ttf
 
   #
   # For details regarding assets in packages, see
