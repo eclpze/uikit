@@ -60,53 +60,56 @@ class _CustomTextFieldState extends State<CustomTextField> {
             child: Row(
               children: [
                 Text(widget.title, style: captionRegular.copyWith(color: desc)),
-                Spacer(),
               ],
             ),
           ),
-        TextField(
-          controller: widget.controller,
-          obscureText: widget.type == textFieldType.password
-              ? obscureText
-              : false,
-          cursorColor: widget.colorCursor,
-          decoration: InputDecoration(
-            suffixIcon: widget.type == textFieldType.password
-                ? IconButton(
-                    onPressed: () {
-                      setState(() {
-                        obscureText = !obscureText;
-                      });
-                    },
-                    icon: obscureText
-                        ? SvgPicture.asset('assets/close.svg')
-                        : SvgPicture.asset('assets/eye.svg'),
-                  )
-                : null,
-            hintText: widget.hintText,
-            hintStyle: textRegular.copyWith(color: caption),
-            filled: true,
-            fillColor: hasError ? error_textfield : widget.color,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(widget.borderRadius),
+        if (widget.isTitle) SizedBox(height: 10),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: widget.paddingTextField),
+          child: TextField(
+            controller: widget.controller,
+            obscureText: widget.type == textFieldType.password
+                ? obscureText
+                : false,
+            cursorColor: widget.colorCursor,
+            decoration: InputDecoration(
+              suffixIcon: widget.type == textFieldType.password
+                  ? IconButton(
+                      onPressed: () {
+                        setState(() {
+                          obscureText = !obscureText;
+                        });
+                      },
+                      icon: obscureText
+                          ? SvgPicture.asset('assets/close.svg')
+                          : SvgPicture.asset('assets/eye.svg'),
+                    )
+                  : null,
+              hintText: widget.hintText,
+              hintStyle: textRegular.copyWith(color: caption),
+              filled: true,
+              fillColor: hasError ? error_textfield : widget.color,
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(widget.borderRadius),
+                ),
+                borderSide: BorderSide(color: hasError ? error : widget.border),
               ),
-              borderSide: BorderSide(color: hasError ? error : widget.border),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(widget.borderRadius),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(widget.borderRadius),
+                ),
+                borderSide: BorderSide(
+                  color: hasError ? error : widget.focusBorder,
+                ),
               ),
-              borderSide: BorderSide(
-                color: hasError ? error : widget.focusBorder,
-              ),
-            ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(widget.borderRadius),
-              ),
-              borderSide: BorderSide(
-                color: hasError ? error : widget.enabledBorder,
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(widget.borderRadius),
+                ),
+                borderSide: BorderSide(
+                  color: hasError ? error : widget.enabledBorder,
+                ),
               ),
             ),
           ),

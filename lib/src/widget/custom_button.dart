@@ -78,7 +78,6 @@ class _CustomButtonState extends State<CustomButton> {
           minimumSize: Size(widget.width, widget.height),
           fixedSize: Size(widget.width, widget.height),
           backgroundColor: widget.color,
-          enableFeedback: true,
         ),
         onPressed: widget.onPressed,
         child: Row(
