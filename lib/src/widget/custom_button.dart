@@ -20,6 +20,7 @@ class CustomButton extends StatefulWidget {
   final double height; // Высота
   final String? icon; // Путь к иконке
   final bool? isSelected; // Значение для chips
+  final VoidCallback onIcon; // Действие при нажатии на иконку
 
   const CustomButton({
     super.key,
@@ -33,7 +34,7 @@ class CustomButton extends StatefulWidget {
     this.icon,
     required this.onPressed,
     required this.colorText,
-   this.isSelected,
+   this.isSelected, required this.onIcon,
   });
 
   @override
@@ -68,37 +69,39 @@ class _CustomButtonState extends State<CustomButton> {
     if (widget.type == ButtonType.cart) {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
-          minimumSize: Size(widget.width, widget.height),
-          fixedSize: Size(widget.width, widget.height),
-          backgroundColor: widget.color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(widget.borderRadius),
             ),
           ),
+          minimumSize: Size(widget.width, widget.height),
+          fixedSize: Size(widget.width, widget.height),
+          backgroundColor: widget.color,
+          enableFeedback: true,
         ),
         onPressed: widget.onPressed,
         child: Row(
           children: [
             CustomIcon(
-              onPressed: () {},
               path: 'assets/cart.svg',
-              height: 20,
               width: 20,
+              height: 20,
               padding: 0,
+              onPressed: widget.onIcon,
             ),
+            SizedBox(width: 16),
             Text(
               widget.text,
               overflow: TextOverflow.ellipsis,
-              style: title3semi.copyWith(color: white)
+              style: title3semi.copyWith(color: white),
             ),
-            SizedBox(width: 6,),
+            Spacer(),
             if (widget.price != null)
               Text(
-              widget.price!,
-                  overflow: TextOverflow.ellipsis,
-              style: title3semi.copyWith(color: white)
-            ),
+                widget.price!,
+                style: title3semi.copyWith(color: white),
+                overflow: TextOverflow.ellipsis,
+              ),
           ],
         ),
       );
