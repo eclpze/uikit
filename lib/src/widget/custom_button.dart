@@ -87,10 +87,13 @@ class _CustomButtonState extends State<CustomButton> {
               width: 20,
               padding: 5,
             ),
-            Text(
-              widget.text,
-              overflow: TextOverflow.ellipsis,
-              style: title3semi.copyWith(color: white)
+            SizedBox(width: 12,),
+            Expanded(
+              child: Text(
+                widget.text,
+                overflow: TextOverflow.ellipsis,
+                style: title3semi.copyWith(color: white)
+              ),
             ),
             Spacer(),
             if (widget.price != null)
