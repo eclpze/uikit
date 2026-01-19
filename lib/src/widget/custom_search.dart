@@ -63,13 +63,7 @@ class _CustomSearchState extends State<CustomSearch> {
                   padding: 0,
                 )
               : null,
-          prefixIcon: CustomIcon(
-            onPressed: () {},
-            path: 'assets/search.svg',
-            height: 20,
-            width: 20,
-            padding: 0,
-          ),
+          prefixIcon: Icon(MyFlutterApp.icon_check),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(widget.borderRadius),
