@@ -68,7 +68,6 @@ class _CustomButtonState extends State<CustomButton> {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
           minimumSize: Size(widget.width, widget.height),
-          fixedSize: Size(widget.width, widget.height),
           backgroundColor: widget.color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
@@ -81,7 +80,7 @@ class _CustomButtonState extends State<CustomButton> {
           children: [
             CustomIcon(
               onPressed: () {},
-              path: widget.icon!,
+              path: 'assets/cart.svg',
               height: 20,
               width: 20,
               padding: 0,
