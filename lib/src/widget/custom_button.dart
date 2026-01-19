@@ -111,6 +111,7 @@ class _CustomButtonState extends State<CustomButton> {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
           minimumSize: Size(widget.width, widget.height),
+          fixedSize: Size(widget.width, widget.height),
           backgroundColor: widget.color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
