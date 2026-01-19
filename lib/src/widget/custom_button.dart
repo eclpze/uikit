@@ -85,7 +85,7 @@ class _CustomButtonState extends State<CustomButton> {
               path: 'assets/cart.svg',
               height: 20,
               width: 20,
-              padding: 0,
+              padding: 5,
             ),
             Text(
               widget.text,
