@@ -53,17 +53,13 @@ class _CustomSearchState extends State<CustomSearch> {
           hintText: widget.hintText,
           hintStyle: headlineRegular.copyWith(color: caption),
           suffixIcon: widget.controller.text.isNotEmpty
-              ? CustomIcon(
-                  onPressed: () {
-                    widget.controller.clear();
-                  },
-                  path:'assets/close.svg',
-                  height: 20,
-                  width: 20,
-                  padding: 0,
-                )
+              ? GestureDetector(
+            onTap: () {
+              widget.controller.clear();
+            },
+              child: Icon(MyFlutterApp.icon_close))
               : null,
-          prefixIcon: Icon(MyFlutterApp.icon_shopping_cart),
+          prefixIcon: Icon(MyFlutterApp.icon_check),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(widget.borderRadius),
