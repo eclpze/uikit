@@ -114,6 +114,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             ),
           ),
         ),
+        SizedBox(height: 10,),
         if (hasError)
           Padding(
             padding: EdgeInsets.symmetric(horizontal: widget.paddingTextField),
