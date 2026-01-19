@@ -79,7 +79,6 @@ class _CustomButtonState extends State<CustomButton> {
         ),
         onPressed: widget.onPressed,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             CustomIcon(
               onPressed: () {},
@@ -89,12 +88,14 @@ class _CustomButtonState extends State<CustomButton> {
               padding: 0,
             ),
             SizedBox(width: 16),
-            Text(
-              widget.text,
-              overflow: TextOverflow.ellipsis,
-              style: title3semi.copyWith(color: white)
+            Expanded(
+              child: Text(
+                widget.text,
+                overflow: TextOverflow.ellipsis,
+                style: title3semi.copyWith(color: white)
+              ),
             ),
-            Spacer(),
+            SizedBox(width: 50,),
             if (widget.price != null)
               Text(
               widget.price!,
