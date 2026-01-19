@@ -18,9 +18,7 @@ class CustomButton extends StatefulWidget {
   final double height; // Высота
   final double width; // Ширина
   final String? icon; // Путь к иконке
-  final Color? selected; // Цвет выбранной кнопки
-  final Color? notSelected; // Цвет невыбранной кнопки
-  final bool isSelected; // Значение для chips
+  final bool? isSelected; // Значение для chips
 
   const CustomButton({
     super.key,
@@ -34,9 +32,7 @@ class CustomButton extends StatefulWidget {
     this.icon,
     required this.onPressed,
     required this.colorText,
-    required this.selected,
-    required this.notSelected,
-    required this.isSelected,
+   this.isSelected,
   });
 
   @override
@@ -50,9 +46,7 @@ class _CustomButtonState extends State<CustomButton> {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
           minimumSize: Size(widget.width, widget.height),
-          backgroundColor: widget.isSelected
-              ? widget.selected
-              : widget.notSelected,
+          backgroundColor: widget.color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(widget.borderRadius),
@@ -65,8 +59,7 @@ class _CustomButtonState extends State<CustomButton> {
           style: GoogleFonts.roboto(
             fontSize: 15,
             fontWeight: FontWeight.w700,
-            color: widget.isSelected
-                ? widget.colorText : desc,
+            color: widget.colorText,
           ),
         ),
       );
@@ -118,9 +111,7 @@ class _CustomButtonState extends State<CustomButton> {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
           minimumSize: Size(widget.width, widget.height),
-          backgroundColor: widget.isSelected
-              ? widget.selected
-              : widget.notSelected,
+          backgroundColor: widget.color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(widget.borderRadius),
@@ -162,7 +153,7 @@ class _CustomButtonState extends State<CustomButton> {
               Radius.circular(widget.borderRadius),
             ),
             side: widget.type == ButtonType.secondary
-                ? BorderSide(color: accent)
+                ? BorderSide(color: accent, width: 1.5)
                 : BorderSide.none,
           ),
         ),
