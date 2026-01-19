@@ -69,7 +69,6 @@ class _CustomButtonState extends State<CustomButton> {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
           minimumSize: Size(widget.width, widget.height),
-          fixedSize: Size(widget.width, widget.height),
           backgroundColor: widget.color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
@@ -79,6 +78,7 @@ class _CustomButtonState extends State<CustomButton> {
         ),
         onPressed: widget.onPressed,
         child: Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
             CustomIcon(
               onPressed: () {},
@@ -88,14 +88,12 @@ class _CustomButtonState extends State<CustomButton> {
               padding: 0,
             ),
             SizedBox(width: 16),
-            Expanded(
-              child: Text(
-                widget.text,
-                overflow: TextOverflow.ellipsis,
-                style: title3semi.copyWith(color: white)
-              ),
+            Text(
+              widget.text,
+              overflow: TextOverflow.ellipsis,
+              style: title3semi.copyWith(color: white)
             ),
-            SizedBox(width: 50,),
+            Spacer(),
             if (widget.price != null)
               Text(
               widget.price!,
