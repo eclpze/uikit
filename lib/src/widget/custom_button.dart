@@ -86,7 +86,7 @@ class _CustomButtonState extends State<CustomButton> {
               width: 20,
               padding: 0,
             ),
-            SizedBox(width: 16),
+            SizedBox(width: 12),
             Text(
               widget.text,
               style: GoogleFonts.roboto(
@@ -95,7 +95,7 @@ class _CustomButtonState extends State<CustomButton> {
                 color: white,
               ),
             ),
-            SizedBox(width: 140),
+            Spacer(),
             Text(
               widget.price!,
               style: GoogleFonts.roboto(
