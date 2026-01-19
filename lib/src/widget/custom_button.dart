@@ -20,7 +20,7 @@ class CustomButton extends StatefulWidget {
   final double height; // Высота
   final String? icon; // Путь к иконке
   final bool? isSelected; // Значение для chips
-  final VoidCallback onIcon; // Действие при нажатии на иконку
+  final VoidCallback? onIcon; // Действие при нажатии на иконку
 
   const CustomButton({
     super.key,
@@ -34,7 +34,8 @@ class CustomButton extends StatefulWidget {
     this.icon,
     required this.onPressed,
     required this.colorText,
-   this.isSelected, required this.onIcon,
+    this.isSelected,
+    this.onIcon,
   });
 
   @override
@@ -87,7 +88,7 @@ class _CustomButtonState extends State<CustomButton> {
               width: 20,
               height: 20,
               padding: 0,
-              onPressed: widget.onIcon,
+              onPressed: widget.onIcon!,
             ),
             SizedBox(width: 16),
             Text(
