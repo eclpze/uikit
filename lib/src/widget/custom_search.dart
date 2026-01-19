@@ -38,23 +38,26 @@ class CustomSearch extends StatefulWidget {
 class _CustomSearchState extends State<CustomSearch> {
   @override
   Widget build(BuildContext context) {
-    bool hasText = widget.controller.text.isNotEmpty;
-
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: (widget.paddingTextField)),
       child: TextField(
         controller: widget.controller,
-        onChanged: (i) {},
+        onChanged: (value) {
+          setState(() {
+          });
+        },
         cursorColor: widget.colorCursor,
         decoration: InputDecoration(
           fillColor: widget.color,
           filled: true,
           hintText: widget.hintText,
           hintStyle: headlineRegular.copyWith(color: caption),
-          suffixIcon: hasText
+          suffixIcon: widget.controller.text.isNotEmpty
               ? CustomIcon(
-                  onPressed: () {},
-                  path: widget.pathIcon2,
+                  onPressed: () {
+                    widget.controller.clear();
+                  },
+                  path:'assets/close.svg',
                   height: 20,
                   width: 20,
                   padding: 0,
@@ -62,7 +65,7 @@ class _CustomSearchState extends State<CustomSearch> {
               : null,
           prefixIcon: CustomIcon(
             onPressed: () {},
-            path: widget.pathIcon1,
+            path: 'assets/search.svg',
             height: 20,
             width: 20,
             padding: 0,
