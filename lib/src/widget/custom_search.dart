@@ -63,7 +63,7 @@ class _CustomSearchState extends State<CustomSearch> {
                   padding: 0,
                 )
               : null,
-          prefixIcon: Icon(MyFlutterApp.icon_check),
+          prefixIcon: Icon(MyFlutterApp.icon_shopping_cart),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(widget.borderRadius),
