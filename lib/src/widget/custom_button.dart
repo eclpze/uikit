@@ -15,8 +15,8 @@ class CustomButton extends StatefulWidget {
   final String text; // Текст кнопки
   final String? price; // Текст для типа cart
   final double borderRadius; // Закругление
-  final double height; // Высота
   final double width; // Ширина
+  final double height; // Высота
   final String? icon; // Путь к иконке
   final bool? isSelected; // Значение для chips
 
