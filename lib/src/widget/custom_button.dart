@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:package_uikit/package_uikit.dart';
 import 'package:package_uikit/src/color.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:package_uikit/src/widget/custom_icon.dart';
@@ -68,6 +69,7 @@ class _CustomButtonState extends State<CustomButton> {
       return ElevatedButton(
         style: ElevatedButton.styleFrom(
           minimumSize: Size(widget.width, widget.height),
+          fixedSize: Size(widget.width, widget.height),
           backgroundColor: widget.color,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
@@ -88,20 +90,15 @@ class _CustomButtonState extends State<CustomButton> {
             SizedBox(width: 12),
             Text(
               widget.text,
-              style: GoogleFonts.roboto(
-                fontSize: 17,
-                fontWeight: FontWeight.w700,
-                color: white,
-              ),
+              overflow: TextOverflow.ellipsis,
+              style: title3semi.copyWith(color: white)
             ),
             Spacer(),
-            Text(
+            if (widget.price != null)
+              Text(
               widget.price!,
-              style: GoogleFonts.roboto(
-                fontSize: 17,
-                fontWeight: FontWeight.w700,
-                color: white,
-              ),
+                  overflow: TextOverflow.ellipsis,
+              style: title3semi.copyWith(color: white)
             ),
           ],
         ),
