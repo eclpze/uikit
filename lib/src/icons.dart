@@ -1,6 +1,14 @@
 import 'package:flutter/widgets.dart';
 
 class MyFlutterApp {
+  static void debugPrintIcons() {
+    print('=== Package Icons Debug ===');
+    print('Font Family: $_kFontFam');
+    print('icon_check code: 0x${icon_check.codePoint.toRadixString(16)}');
+    print('icon_close code: 0x${icon_close.codePoint.toRadixString(16)}');
+    print('===========================');
+  }
+
   MyFlutterApp._();
 
   static const _kFontFam = 'MyFlutterApp';
